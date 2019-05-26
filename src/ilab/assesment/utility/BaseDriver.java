@@ -28,7 +28,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import auto.selenium.testng_reporting.ILabAssesment;
+import ilab.assesment.testcase.ILabAssesment;
 
 public class BaseDriver {
 

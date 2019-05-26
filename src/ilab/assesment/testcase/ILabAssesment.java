@@ -1,4 +1,4 @@
-package auto.selenium.testng_reporting;
+package ilab.assesment.testcase;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -24,7 +24,6 @@ public class ILabAssesment extends BaseDriver{
 	ExtentReports extent;
 	ExtentTest test;
 	String reporter;
-	String userName = "tomsmith";
 	Properties DataFile;
 	private Logger log;
 
@@ -37,16 +36,28 @@ public class ILabAssesment extends BaseDriver{
 	public void reporting() throws Throwable {
 		initializeObjects();
 		generateReport();
+		String os = System.getProperty("os.name").toLowerCase();
 		DataFile = new Properties();
-		FileInputStream fip = new FileInputStream(System.getProperty("user.dir")+"/data/DataFile.properties");
-		DataFile.load(fip);
+		String macFilePath = "/data/DataFile.properties";
+		String winFilePath = "\\data\\DataFile.properties";
+		
+		if (os.contains("mac")) {
+			FileInputStream fip = new FileInputStream(System.getProperty("user.dir")+macFilePath);
+			DataFile.load(fip);
+		}
+		
+		if (os.contains("windows")) {
+			FileInputStream fip = new FileInputStream((System.getProperty("user.dir")+winFilePath));
+			DataFile.load(fip);
+		}
+		
 		
 	}
 	
 	//test case steps below
 	@Test(priority = 1)
 	public void succesfulLogin() throws Throwable {
-		this.log = Logger.getLogger(ILabAssesment.class);
+		//this.log = Logger.getLogger(ILabAssesment.class);
 		loadWebBrowser();
 		navigateToSite();
 		getElemByLinkText(DataFile.getProperty("btnCareers")).click(); //careers
