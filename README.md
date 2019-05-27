@@ -2,6 +2,7 @@
 
 This project runs on both Windows and Mac
   - Tested on mac with both browsers (Firefox and Chrome)
+  - Tested on Windows, chrom test ran succesful while Firefox crashed
 
 # Known Issue
 Firefox browser crashes on Windows, this might be caused by version compatibility. Investigation underway
