@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-26T19:14:54Z" name="Default suite" finished-at="2019-05-26T19:15:32Z" duration-ms="37828">
+  <suite started-at="2019-05-27T09:27:33Z" name="Default suite" finished-at="2019-05-27T09:28:36Z" duration-ms="62466">
     <groups>
     </groups>
-    <test started-at="2019-05-26T19:14:54Z" name="Default test" finished-at="2019-05-26T19:15:32Z" duration-ms="37828">
-      <class name="auto.selenium.testng_reporting.ILabAssesment">
-        <test-method is-config="true" signature="reporting()[pri:0, instance:auto.selenium.testng_reporting.ILabAssesment@7ee8290b]" started-at="2019-05-26T19:14:54Z" name="reporting" finished-at="2019-05-26T19:14:55Z" duration-ms="433" status="PASS">
+    <test started-at="2019-05-27T09:27:33Z" name="Default test" finished-at="2019-05-27T09:28:36Z" duration-ms="62466">
+      <class name="ilab.assesment.testcase.ILabAssesment">
+        <test-method is-config="true" signature="reporting()[pri:0, instance:ilab.assesment.testcase.ILabAssesment@568ff82]" started-at="2019-05-27T09:27:33Z" name="reporting" finished-at="2019-05-27T09:27:34Z" duration-ms="400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reporting -->
-        <test-method signature="succesfulLogin()[pri:1, instance:auto.selenium.testng_reporting.ILabAssesment@7ee8290b]" started-at="2019-05-26T19:14:55Z" name="succesfulLogin" finished-at="2019-05-26T19:15:29Z" duration-ms="34271" status="PASS">
+        <test-method signature="succesfulLogin()[pri:1, instance:ilab.assesment.testcase.ILabAssesment@568ff82]" started-at="2019-05-27T09:27:34Z" name="succesfulLogin" finished-at="2019-05-27T09:28:33Z" duration-ms="59167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- succesfulLogin -->
-        <test-method is-config="true" signature="getTestResults(org.testng.ITestResult)[pri:0, instance:auto.selenium.testng_reporting.ILabAssesment@7ee8290b]" started-at="2019-05-26T19:15:29Z" name="getTestResults" finished-at="2019-05-26T19:15:31Z" duration-ms="1746" status="PASS">
+        <test-method is-config="true" signature="getTestResults(org.testng.ITestResult)[pri:0, instance:ilab.assesment.testcase.ILabAssesment@568ff82]" started-at="2019-05-27T09:28:33Z" name="getTestResults" finished-at="2019-05-27T09:28:34Z" duration-ms="982" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=succesfulLogin status=SUCCESS method=ILabAssesment.succesfulLogin()[pri:1, instance:auto.selenium.testng_reporting.ILabAssesment@7ee8290b] output={null}]]]>
+                <![CDATA[[TestResult name=succesfulLogin status=SUCCESS method=ILabAssesment.succesfulLogin()[pri:1, instance:ilab.assesment.testcase.ILabAssesment@568ff82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResults -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:auto.selenium.testng_reporting.ILabAssesment@7ee8290b]" started-at="2019-05-26T19:15:31Z" name="closeBrowser" finished-at="2019-05-26T19:15:32Z" duration-ms="1336" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ilab.assesment.testcase.ILabAssesment@568ff82]" started-at="2019-05-27T09:28:34Z" name="closeBrowser" finished-at="2019-05-27T09:28:36Z" duration-ms="1870" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- auto.selenium.testng_reporting.ILabAssesment -->
+      </class> <!-- ilab.assesment.testcase.ILabAssesment -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

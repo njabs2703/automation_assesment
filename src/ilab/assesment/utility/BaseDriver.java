@@ -132,13 +132,19 @@ public class BaseDriver {
 	}
 
 	public String getScreenshot(WebDriver driver, String screenshotName) throws Exception {
-
+		String destination = null;
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 
-		String destination = System.getProperty("user.dir") + "/TestResults/" + screenshotName + dateName
-				+ ".png";
+		String os = System.getProperty("os.name").toLowerCase();
+		
+		if (os.contains("mac")) 
+			destination = System.getProperty("user.dir") + "/TestResults/" + screenshotName + dateName + ".png";
+		
+		if (os.contains("windows")) 
+			destination = System.getProperty("user.dir") + "\\TestResults\\" + screenshotName + dateName + ".png";
+			
 		File finalDestination = new File(destination);
 		FileUtils.copyFile(source, finalDestination);
 
@@ -151,7 +157,7 @@ public class BaseDriver {
 			String screenShotPath = getScreenshot(driver, "ScreenshotFail");
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:",
 					ExtentColor.RED));
-			test.fail(result.getThrowable().getMessage().toString());
+			test.fail(result.getThrowable().getMessage());
 			test.fail("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			String screenShotPath = getScreenshot(driver, "ScreenshotPass");

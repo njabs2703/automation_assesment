@@ -73,7 +73,7 @@ public class ILabAssesment extends BaseDriver{
 		WebElement errorValidation = getElemByCSS("ul.wpjb-errors"); //expectedError
 		String errorMessage = errorValidation.getText();
 		Assert.assertEquals(errorMessage, "You need to upload at least one file.");
-		log.info(this.getClass().getSimpleName()+" test completed");
+		//log.info(this.getClass().getSimpleName()+" test completed");
 
 	}
 
