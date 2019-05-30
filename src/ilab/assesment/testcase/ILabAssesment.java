@@ -70,7 +70,7 @@ public class ILabAssesment extends BaseDriver{
 		getElemById("phone").sendKeys(new PhoneNumber().mobileNumber());
 		scrollToView("wpjb_submit");
 		getElemById("wpjb_submit").click(); //submit
-		WebElement errorValidation = getElemByCSS("ul.wpjb-errors"); //expectedError
+		WebElement errorValidation = getElemByCSS(DataFile.getProperty("expectedError")); //expectedError
 		String errorMessage = errorValidation.getText();
 		Assert.assertEquals(errorMessage, "You need to upload at least one file.");
 		//log.info(this.getClass().getSimpleName()+" test completed");
