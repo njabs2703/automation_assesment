@@ -42,7 +42,7 @@ public class BaseDriver {
 	static WebDriver mozillaBrowser;
 	static Logger log = null;
 	static String reporter;
-	static String geckoPath = System.getProperty("user.dir") + "/lib/geckodriver";
+	static String geckoPath = System.getProperty("user.dir") + "\\lib\\geckodriver.exe";
 
 	public void initializeObjects() throws IOException {
 		//initialize logger service.
@@ -79,13 +79,13 @@ public class BaseDriver {
 		String os = System.getProperty("os.name").toLowerCase();
 		test.info("running tests on "+ os + "platform");
 		// Check the browser instance
-		if (Object.getProperty("testBrowser").equalsIgnoreCase("Mozilla") && mozillaBrowser != null) {
+/*		if (Object.getProperty("testBrowser").equalsIgnoreCase("Mozilla")) {
 			driver = mozillaBrowser;
 			return;
-		} else if (Object.getProperty("testBrowser").equalsIgnoreCase("chrome") && chromeBrowser != null) {
+		} else if (Object.getProperty("testBrowser").equalsIgnoreCase("chrome")) {
 			driver = chromeBrowser;
 			return;
-		}
+		}*/
 
 		if (os.contains("mac")) {
 			if (Object.getProperty("testBrowser").equalsIgnoreCase("Mozilla")) {
