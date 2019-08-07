@@ -78,14 +78,7 @@ public class BaseDriver {
 		// check os before loading browser
 		String os = System.getProperty("os.name").toLowerCase();
 		test.info("running tests on "+ os + "platform");
-		// Check the browser instance
-/*		if (Object.getProperty("testBrowser").equalsIgnoreCase("Mozilla")) {
-			driver = mozillaBrowser;
-			return;
-		} else if (Object.getProperty("testBrowser").equalsIgnoreCase("chrome")) {
-			driver = chromeBrowser;
-			return;
-		}*/
+
 
 		if (os.contains("mac")) {
 			if (Object.getProperty("testBrowser").equalsIgnoreCase("Mozilla")) {
