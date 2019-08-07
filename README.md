@@ -6,6 +6,7 @@ This project runs on both Windows and Mac
 
 # Known Issue
 Firefox browser crashes on Windows, this might be caused by version compatibility. Investigation underway
+  - Above issue has been fixed
 
 # How to
   - DataFile.properties is used for data, uiObjects, change browser and siteUrl
